@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>불향기 프랜차이즈 - 신개념 직화구이 안주 테이크아웃 전문점 가맹모집 | 불막창, 불곱창, 불닭발 소자본창업</title>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TGPDYDBB3J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-TGPDYDBB3J');
+    </script>
+
+    <meta name="description" content="전국 20여 개 매장이 증명한 불맛의 과학! 소스 제조사가 직접 운영하는 테이크아웃 직화구이 전문 프랜차이즈 불향기입니다. 막창, 곱창, 닭발 창업을 소자본으로 시작하세요.">
+    <meta name="keywords" content="불향기, 불향기창업, 직화구이프랜차이즈, 소자본창업, 막창창업, 닭발창업, 불곱창창업, 불맛맛집, 테이크아웃전문점, 불막창창업, 매운맛프랜차이즈, 직화구이창업, 테이크아웃창업, 불닭발창업, 매운맛창업, 매운맛프랜차이즈, 테이크아웃프랜차이즈">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+
+    <style>
+        :root {
+            --fire: #e8380d;
+            --fire-dark: #b02800;
+            --fire-light: #ff6b35;
+            --ember: #ff9500;
+            --char: #130d06;
+            --smoke: #1e1409;
+            --ash: #f7f2ea;
+            --cream: #fdf8f0;
+            --text: #160e05;
+            --text-muted: #7a6650;
+        }
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 400;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+            word-break: keep-all;
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s cubic-bezier(0.22,1,0.36,1), transform 0.8s cubic-bezier(0.22,1,0.36,1);
+        }
+        .reveal.from-left  { transform: translateX(-60px) translateY(0); }
+        .reveal.from-right { transform: translateX(60px) translateY(0); }
+        .reveal.scale-in   { transform: scale(0.9) translateY(20px); }
+        .reveal.visible    { opacity: 1; transform: none !important; }
+        .d1 { transition-delay: 0.1s; }
+        .d2 { transition-delay: 0.2s; }
+        .d3 { transition-delay: 0.3s; }
+        .d4 { transition-delay: 0.4s; }
+        .d5 { transition-delay: 0.5s; }
+        .d6 { transition-delay: 0.6s; }
+
+        /* ===== NAV ===== */
+        nav {
+            position: fixed; top:0; left:0; right:0; z-index:200;
+            padding: 0 2rem;
+            transition: background 0.4s, box-shadow 0.4s;
+        }
+        nav.scrolled {
+            background: rgba(19,13,6,0.97);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 1px 0 rgba(232,56,13,0.2);
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            height: 64px; display: flex; align-items: center; justify-content: space-between;
+        }
+        .nav-logo img { height: 38px; }
+        .nav-links { display:flex; gap:2rem; list-style:none; }
+        .nav-links a {
+            color: rgba(255,255,255,0.65); text-decoration: none;
+            font-size: 0.82rem; font-weight: 500; letter-spacing: 0.06em;
+            transition: color 0.2s; cursor: pointer;
+        }
+        .nav-links a:hover { color: var(--ember); }
+        .nav-cta { background:var(--fire) !important; color:white !important; padding:0.45rem 1.2rem; border-radius:3px; font-weight:700 !important; }
+        .nav-cta:hover { background:var(--fire-light) !important; }
+        .mobile-cta { display:none; }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative; min-height: 100vh;
+            background: var(--char); display: flex; align-items: center; overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover; background-position: center; opacity: 0.2;
+            animation: heroZoom 14s ease-in-out infinite alternate;
+        }
+        @keyframes heroZoom { from { transform:scale(1.02); } to { transform:scale(1.1); } }
+        .hero-gradient {
+            position: absolute; inset: 0;
+            background: linear-gradient(140deg, rgba(19,13,6,0.97) 0%, rgba(19,13,6,0.55) 55%, rgba(232,56,13,0.1) 100%);
+        }
+        .embers { position:absolute; inset:0; pointer-events:none; overflow:hidden; }
+        .ember {
+            position: absolute; bottom: -10px;
+            border-radius: 50%; opacity: 0;
+            animation: riseEmber linear infinite;
+        }
+        @keyframes riseEmber {
+            0%   { opacity:0; transform:translateY(0) translateX(0); }
+            15%  { opacity:0.9; }
+            85%  { opacity:0.3; }
+            100% { opacity:0; transform:translateY(-70vh) translateX(var(--drift)); }
+        }
+        .hero-content {
+            position: relative; z-index:2;
+            max-width: 1200px; margin: 0 auto;
+            padding: 8rem 2rem 5rem;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid rgba(232,56,13,0.4); color: var(--fire-light);
+            padding: 0.3rem 0.9rem; font-size: 0.72rem; font-weight: 600;
+            letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1.5rem;
+            animation: fadeDown 0.9s 0.2s both;
+        }
+        .hero-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(4rem, 8vw, 8.5rem);
+            line-height: 0.95; color: white; margin-bottom: 1.5rem;
+            letter-spacing: 0.02em;
+            animation: fadeDown 0.9s 0.4s both;
+        }
+        .hero-title .zero { color: rgba(255,255,255,0.22); }
+        .hero-title .max  { color: var(--fire); text-shadow: 0 0 50px rgba(232,56,13,0.5); }
+        .hero-desc {
+            color: rgba(255,255,255,0.5); font-size: 1rem; line-height: 1.95;
+            margin-bottom: 2.5rem; font-weight: 300;
+            animation: fadeDown 0.9s 0.6s both;
+        }
+        .hero-desc strong { color: rgba(255,255,255,0.88); font-weight: 600; }
+        .hero-stats { display:flex; gap:2rem; margin-bottom:2.5rem; animation: fadeDown 0.9s 0.8s both; }
+        .hero-stat { border-left: 2px solid var(--fire); padding-left: 1rem; }
+        .hero-stat-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem; color: var(--ember); line-height: 1; letter-spacing: 0.03em;
+        }
+        .hero-stat-label { font-size: 0.7rem; color: rgba(255,255,255,0.38); margin-top:0.2rem; }
+        .hero-btn {
+            display: inline-flex; align-items: center; gap: 0.75rem;
+            background: var(--fire); color: white;
+            padding: 1rem 1.75rem; font-size: 0.95rem; font-weight: 700;
+            text-decoration: none; border: none; cursor: pointer;
+            transition: all 0.3s; letter-spacing: 0.05em;
+            animation: fadeDown 0.9s 1s both; position: relative; overflow: hidden;
+        }
+        .hero-btn::after {
+            content: ''; position:absolute; top:50%; left:-60%;
+            width:40%; height:200%; background:rgba(255,255,255,0.15);
+            transform: translateY(-50%) skewX(-20deg); transition: left 0.5s ease;
+        }
+        .hero-btn:hover::after { left:130%; }
+        .hero-btn:hover { background:var(--fire-light); transform:translateY(-2px); box-shadow: 0 10px 30px rgba(232,56,13,0.45); }
+
+        .hero-visual { display:flex; justify-content:center; align-items:center; animation: fadeDown 0.9s 0.5s both; }
+        .hero-logo-frame {
+            position: relative; padding: 3rem;
+            border: 1px solid rgba(232,56,13,0.16); background: rgba(232,56,13,0.025);
+            animation: floatY 7s ease-in-out infinite;
+        }
+        .hero-logo-frame::before {
+            content:''; position:absolute; top:-1px; left:-1px;
+            width:50px; height:50px; border-top:3px solid var(--fire); border-left:3px solid var(--fire);
+        }
+        .hero-logo-frame::after {
+            content:''; position:absolute; bottom:-1px; right:-1px;
+            width:50px; height:50px; border-bottom:3px solid var(--fire); border-right:3px solid var(--fire);
+        }
+        .hero-logo-frame img { max-width:320px; width:100%; display:block; }
+        @keyframes floatY { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-18px); } }
+        @keyframes fadeDown { from { opacity:0; transform:translateY(-24px); } to { opacity:1; transform:translateY(0); } }
+
+        /* ===== TICKER ===== */
+        .ticker-wrap { background:var(--fire); overflow:hidden; padding:0.7rem 0; }
+        .ticker-inner { display:flex; animation:ticker 24s linear infinite; white-space:nowrap; }
+        .ticker-item { color:white; font-size:0.78rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:0 2rem; }
+        .ticker-sep { color:rgba(255,255,255,0.4); }
+        @keyframes ticker { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+        /* ===== SECTIONS ===== */
+        section { padding: 7rem 2rem; }
+        .section-wrap { max-width:1200px; margin:0 auto; }
+        .section-label {
+            display:inline-block; font-size:0.68rem; font-weight:700;
+            letter-spacing:0.22em; text-transform:uppercase;
+            color:var(--fire); border-bottom:2px solid var(--fire);
+            padding-bottom:0.3rem; margin-bottom:1rem;
+        }
+        .section-title {
+            font-family: 'Noto Sans KR', sans-serif; font-weight:500;
+            font-size: clamp(1.9rem, 3.5vw, 3rem); line-height:1.2;
+            color:var(--text); margin-bottom:1rem;
+        }
+        .section-sub { font-size:0.95rem; color:var(--text-muted); font-weight:400; line-height:1.8; }
+
+        /* ===== NUMBERS STRIP ===== */
+        .numbers-strip { background:var(--smoke); padding:4rem 2rem; }
+        .numbers-inner {
+            max-width:1200px; margin:0 auto;
+            display:grid; grid-template-columns:repeat(4,1fr);
+            gap:1px; background:rgba(255,255,255,0.05);
+        }
+        .number-item {
+            background:var(--smoke); padding:2.5rem 2rem; text-align:center;
+            position:relative; overflow:hidden; transition:background 0.4s;
+        }
+        .number-item::after {
+            content:''; position:absolute; bottom:0; left:0; right:0; height:3px;
+            background:var(--fire); transform:scaleX(0);
+            transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .number-item:hover::after { transform:scaleX(1); }
+        .number-item:hover { background:rgba(232,56,13,0.06); }
+        .number-val {
+            font-family:'Bebas Neue', sans-serif; font-size:3.5rem;
+            color:var(--ember); line-height:1; margin-bottom:0.5rem; letter-spacing:0.03em;
+        }
+        .number-label { font-size:0.75rem; font-weight:500; color:rgba(255,255,255,0.38); letter-spacing:0.08em; text-transform:uppercase; }
+
+        /* ===== INSIGHT ===== */
+        #analysis { background:var(--char); }
+        #analysis .section-title { color:white; font-weight:400; }
+        #analysis .section-sub { color:rgba(255,255,255,0.38); }
+
+        .insight-cards {
+            display:grid; grid-template-columns:repeat(4,1fr);
+            gap:1px; background:rgba(255,255,255,0.05); margin:3rem 0;
+        }
+        .insight-card {
+            background:var(--char); padding:2rem; transition:background 0.3s;
+            position:relative; overflow:hidden;
+        }
+        .insight-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:2px;
+            background:linear-gradient(90deg, var(--fire), transparent);
+            transform:scaleX(0); transform-origin:left; transition:transform 0.5s;
+        }
+        .insight-card:hover::before { transform:scaleX(1); }
+        .insight-card:hover { background:rgba(232,56,13,0.06); }
+        .insight-num {
+            font-family:'Bebas Neue', sans-serif; font-size:3.5rem;
+            color:var(--fire); line-height:1; margin-bottom:1rem; letter-spacing:0.03em;
+        }
+        .insight-title { font-size:0.95rem; font-weight:600; color:white; margin-bottom:0.75rem; }
+        .insight-desc { font-size:0.8rem; color:rgba(255,255,255,0.38); line-height:1.75; }
+
+        .insight-bottom { display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start; }
+        .chart-box { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.07); padding:2rem; }
+        .chart-box-title {
+            font-size:0.85rem; font-weight:600; color:white; margin-bottom:1.5rem;
+            display:flex; align-items:center; gap:0.75rem;
+        }
+        .chart-box-title::before { content:''; display:inline-block; width:3px; height:1.1em; background:var(--fire); }
+        .chart-container { height:220px; position:relative; }
+        .insight-right { display:flex; flex-direction:column; gap:1.5rem; }
+        .insight-highlight { background:rgba(232,56,13,0.08); border-left:4px solid var(--fire); padding:1.5rem; }
+        .insight-highlight h4 { font-size:0.95rem; font-weight:700; color:var(--fire-light); margin-bottom:0.75rem; }
+        .insight-highlight p { font-size:0.85rem; color:rgba(255,255,255,0.52); line-height:1.8; }
+        .insight-highlight strong { color:rgba(255,255,255,0.9); }
+        .metric-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,0.05); }
+        .metric-item { background:rgba(255,255,255,0.02); padding:1.25rem; text-align:center; }
+        .metric-label { font-size:0.65rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.28); margin-bottom:0.5rem; }
+        .metric-value { font-family:'Bebas Neue', sans-serif; font-size:2rem; color:var(--ember); letter-spacing:0.03em; }
+
+        /* ===== WHY ===== */
+        #why-bulhyanggi { background:var(--ash); }
+        .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
+        .why-card {
+            background:white; padding:2.5rem; position:relative; overflow:hidden;
+            transition:transform 0.4s cubic-bezier(0.22,1,0.36,1), box-shadow 0.4s;
+        }
+        .why-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:3px;
+            background:var(--fire); transform:scaleX(0); transition:transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .why-card:hover::before { transform:scaleX(1); }
+        .why-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,0.08); }
+        .why-icon { font-size:2.5rem; margin-bottom:1.5rem; display:block; }
+        .why-card-num { position:absolute; top:1.25rem; right:1.5rem; font-family:'Bebas Neue', sans-serif; font-size:5rem; color:rgba(0,0,0,0.04); line-height:1; }
+        .why-card h4 { font-size:1.1rem; font-weight:600; color:var(--text); margin-bottom:0.9rem; }
+        .why-card p { font-size:0.85rem; color:var(--text-muted); line-height:1.85; }
+
+        /* ===== MENU ===== */
+        #menu { background:var(--smoke); }
+        #menu .section-title { color:white; font-weight:400; }
+        #menu .section-sub { color:rgba(255,255,255,0.35); }
+        .menu-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:3rem; }
+        .menu-card { position:relative; overflow:hidden; aspect-ratio:3/4; cursor:pointer; }
+        .menu-card img { width:100%; height:100%; object-fit:cover; transition:transform 0.7s ease; }
+        .menu-card:hover img { transform:scale(1.1); }
+        .menu-card-overlay {
+            position:absolute; inset:0;
+            background:linear-gradient(to top, rgba(19,13,6,0.96) 0%, rgba(19,13,6,0.12) 60%, transparent 100%);
+            display:flex; flex-direction:column; justify-content:flex-end; padding:1.75rem;
+            transition:background 0.4s;
+        }
+        .menu-card:hover .menu-card-overlay { background:linear-gradient(to top, rgba(19,13,6,0.98) 0%, rgba(19,13,6,0.3) 60%, rgba(232,56,13,0.04) 100%); }
+        .menu-tag { display:inline-block; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; padding:0.25rem 0.75rem; margin-bottom:0.75rem; align-self:flex-start; }
+        .menu-tag.red { background:var(--fire); color:white; }
+        .menu-tag.orange { background:var(--ember); color:white; }
+        .menu-tag.dark { background:rgba(255,255,255,0.12); color:white; border:1px solid rgba(255,255,255,0.18); }
+        .menu-card h3 { font-size:1.4rem; font-weight:500; color:white; margin-bottom:0.5rem; }
+        .menu-card p { font-size:0.8rem; color:rgba(255,255,255,0.52); line-height:1.65; }
+
+        /* ===== REVIEWS ===== */
+        #reviews { background:white; }
+        .review-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
+        .review-card {
+            background:var(--ash); padding:2rem;
+            border-top:3px solid transparent;
+            transition:border-color 0.3s, transform 0.4s cubic-bezier(0.22,1,0.36,1);
+        }
+        .review-card:hover { border-color:var(--fire); transform:translateY(-4px); }
+        .review-stars { color:var(--ember); font-size:1rem; margin-bottom:1rem; letter-spacing:0.1em; }
+        .review-text { font-size:0.9rem; color:var(--text); line-height:1.85; margin-bottom:1.5rem; font-weight:400; }
+        .review-author { font-size:0.78rem; font-weight:700; color:var(--text-muted); letter-spacing:0.05em; }
+
+        /* ===== PROFIT CALC ===== */
+        #profit { background:var(--cream); }
+        .calc-wrap {
+            display:grid; grid-template-columns:1fr 420px;
+            background:white; box-shadow:0 8px 60px rgba(0,0,0,0.08);
+            margin-top:3rem; overflow:hidden;
+        }
+        .calc-left { padding:3rem; }
+        .calc-right {
+            background:var(--char); padding:3rem; position:relative; overflow:hidden;
+        }
+        .calc-right::before {
+            content:''; position:absolute; top:-80px; right:-80px;
+            width:320px; height:320px;
+            background:radial-gradient(circle, rgba(232,56,13,0.2) 0%, transparent 70%);
+        }
+        .range-group { margin-bottom:2rem; }
+        .range-label { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.75rem; }
+        .range-label span:first-child { font-size:0.85rem; font-weight:600; color:var(--text); }
+        .range-label span:last-child { font-size:1.1rem; font-weight:700; color:var(--fire); }
+        input[type=range] { -webkit-appearance:none; width:100%; height:4px; background:#e8e0d5; outline:none; border-radius:0; cursor:pointer; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:20px; height:20px; background:var(--fire); cursor:pointer; border-radius:50%; border:3px solid white; box-shadow:0 2px 8px rgba(232,56,13,0.3); }
+        .range-limits { display:flex; justify-content:space-between; font-size:0.7rem; color:var(--text-muted); margin-top:0.5rem; }
+        .calc-summary-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#f0ebe3; margin:2rem 0; }
+        .calc-summary-item { background:white; padding:1rem; }
+        .calc-summary-label { font-size:0.68rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted); margin-bottom:0.3rem; }
+        .calc-summary-value { font-size:1.05rem; font-weight:700; color:var(--text); }
+        .expenses-title { font-size:0.85rem; font-weight:700; color:var(--text); margin-bottom:1.5rem; padding-bottom:0.75rem; border-bottom:1px solid #e8e0d5; }
+        .calc-right-label { font-size:0.68rem; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:rgba(255,255,255,0.28); margin-bottom:1.25rem; }
+        .profit-num { font-family:'Bebas Neue', sans-serif; font-size:3rem; color:#4ade80; line-height:1.1; margin-bottom:0.5rem; letter-spacing:0.03em; }
+        .profit-margin { font-size:0.85rem; color:rgba(255,255,255,0.32); }
+        .profit-margin span { color:white; font-weight:700; }
+        .donut-wrap { position:relative; height:260px; width:260px; margin:2rem auto 0; }
+        .calc-note { font-size:0.68rem; color:rgba(255,255,255,0.18); text-align:center; margin-top:1.25rem; line-height:1.7; }
+
+        /* ===== CONTACT ===== */
+        #contact { background:var(--ash); }
+        .contact-wrap {
+            display:grid; grid-template-columns:280px 1fr;
+            gap:4rem; align-items:center;
+            background:white; padding:4rem;
+            box-shadow:0 4px 40px rgba(0,0,0,0.06); margin-top:3rem;
+        }
+        .contact-profile { text-align:center; }
+        .profile-img { width:110px; height:110px; border-radius:50%; object-fit:cover; border:3px solid var(--fire); margin:0 auto 1.25rem; display:block; }
+        .contact-name { font-size:1.6rem; font-weight:500; color:var(--text); margin-bottom:0.3rem; }
+        .contact-role { font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:var(--fire); }
+        .contact-quote { font-size:1.4rem; font-weight:500; color:var(--text); margin-bottom:1.5rem; line-height:1.4; }
+        .contact-desc { font-size:0.9rem; color:var(--text-muted); line-height:1.95; margin-bottom:2rem; }
+        .contact-desc strong { color:var(--text); font-weight:700; }
+        .contact-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:#f0ebe3; margin-bottom:2rem; }
+        .contact-info-item { background:white; padding:1rem 1.25rem; }
+        .contact-info-label { font-size:0.64rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.35rem; }
+        .contact-info-value { font-size:0.92rem; font-weight:700; color:var(--text); }
+        .contact-btn {
+            display:inline-flex; align-items:center; gap:1rem;
+            background:var(--fire); color:white;
+            padding:1.1rem 2rem; font-size:1rem; font-weight:700;
+            text-decoration:none; transition:all 0.3s; letter-spacing:0.04em;
+            position:relative; overflow:hidden;
+        }
+        .contact-btn::after {
+            content:''; position:absolute; top:50%; left:-60%;
+            width:40%; height:200%; background:rgba(255,255,255,0.15);
+            transform:translateY(-50%) skewX(-20deg); transition:left 0.5s;
+        }
+        .contact-btn:hover::after { left:130%; }
+        .contact-btn:hover { background:var(--fire-light); transform:translateY(-2px); box-shadow:0 8px 30px rgba(232,56,13,0.3); }
+        .contact-btn-icon { width:36px; height:36px; background:rgba(255,255,255,0.18); display:flex; align-items:center; justify-content:center; font-size:1.1rem; }
+
+        /* ===== HASHTAGS ===== */
+        .hashtag-section { background:white; padding:3rem 2rem; }
+        .hashtag-inner { max-width:1200px; margin:0 auto; display:flex; flex-wrap:wrap; gap:0.5rem; justify-content:center; }
+        .hashtag { font-size:0.78rem; font-weight:500; color:var(--text-muted); background:var(--ash); border:1px solid #e0d8cd; padding:0.32rem 0.9rem; border-radius:100px; transition:all 0.2s; cursor:default; }
+        .hashtag:hover { background:#fee2e2; border-color:var(--fire); color:var(--fire); }
+
+        /* ===== FOOTER ===== */
+        footer { background:var(--char); padding:3rem 2rem; text-align:center; }
+        footer img { height:30px; opacity:0.25; filter:grayscale(1); margin:0 auto 1.5rem; display:block; }
+        footer p { font-size:0.72rem; color:rgba(255,255,255,0.18); line-height:1.8; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width:1024px) {
+            .hero-content { grid-template-columns:1fr; text-align:center; }
+            .hero-stats { justify-content:center; }
+            .hero-visual { order:-1; }
+            .hero-logo-frame img { max-width:220px; }
+            .numbers-inner { grid-template-columns:1fr 1fr; }
+            .insight-cards { grid-template-columns:1fr 1fr; }
+            .insight-bottom { grid-template-columns:1fr; }
+            .why-grid { grid-template-columns:1fr 1fr; }
+            .menu-grid { grid-template-columns:1fr 1fr; }
+            .review-grid { grid-template-columns:1fr; gap:1rem; }
+            .calc-wrap { grid-template-columns:1fr; }
+            .contact-wrap { grid-template-columns:1fr; padding:2.5rem; gap:2rem; text-align:center; }
+        }
+        @media (max-width:640px) {
+            section { padding:4rem 1.25rem; }
+            nav { padding:0 1.25rem; }
+            .nav-links { display:none; }
+            .mobile-cta { display:block; background:var(--fire); color:white; padding:0.45rem 1rem; font-size:0.78rem; font-weight:700; text-decoration:none; border-radius:3px; }
+            .hero-title { font-size:3.5rem; }
+            .hero-stats { flex-wrap:wrap; gap:1rem; }
+            .numbers-inner { grid-template-columns:1fr 1fr; }
+            .insight-cards { grid-template-columns:1fr; }
+            .why-grid { grid-template-columns:1fr; }
+            .menu-grid { grid-template-columns:1fr; }
+            .calc-left { padding:1.5rem; }
+            .calc-summary-grid { grid-template-columns:1fr; }
+            .contact-info-grid { grid-template-columns:1fr; }
+            .contact-wrap { padding:1.5rem; gap:1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXrMFM%2FdJMcacPxjA0%2FAAAAAAAAAAAAAAAAAAAAAMrkRo8rz6QwXWGTcVPhnSF8zFgI0GZt9EaCulhC38Bz%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1772290799%26allow_ip%3D%26allow_referer%3D%26signature%3D5qY9e5ceuc3mbrKiACyxRWohYog%253D" alt="불향기 로고">
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="goTo('analysis')">시장분석</a></li>
+                <li><a onclick="goTo('why-bulhyanggi')">브랜드강점</a></li>
+                <li><a onclick="goTo('menu')">대표메뉴</a></li>
+                <li><a onclick="goTo('reviews')">고객후기</a></li>
+                <li><a onclick="goTo('profit')" class="nav-cta">창업문의</a></li>
+            </ul>
+            <a href="tel:01022085540" class="mobile-cta">문의하기</a>
+        </div>
+    </nav>
+
+    <div class="ticker-wrap" style="margin-top:64px;">
+        <div class="ticker-inner">
+            <span class="ticker-item">🔥 불향기 직화구이 프랜차이즈</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">전국 20여 개 매장 운영 중</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">소자본 창업 가맹비 300만원</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">평균 재주문율 45% 이상</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">소스 제조사 직접 공급</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">잡내 ZERO · 불맛 MAX</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">블로그 누적 후기 1,000건+</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">🔥 불향기 직화구이 프랜차이즈</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">전국 20여 개 매장 운영 중</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">소자본 창업 가맹비 300만원</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">평균 재주문율 45% 이상</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">소스 제조사 직접 공급</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">잡내 ZERO · 불맛 MAX</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+            <span class="ticker-item">블로그 누적 후기 1,000건+</span><span class="ticker-sep">&nbsp;—&nbsp;</span>
+        </div>
+    </div>
+
+    <header class="hero" style="margin-top:-64px; padding-top:64px;">
+        <div class="hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="embers" id="embers"></div>
+        <div class="hero-content">
+            <div>
+                <span class="hero-badge">Premium Smoky BBQ Franchise</span>
+                <h1 class="hero-title">
+                    잡내는 <span class="zero">ZERO</span><br>
+                    불맛은 <span class="max">MAX</span>
+                </h1>
+                <p class="hero-desc">
+                    전국 20여 개 매장이 증명한 불맛의 과학.<br>
+                    <strong>소스 제조사가 직접 공급</strong>하는 안정적인 물류와<br>
+                    한 번 먹으면 잊지 못하는 강력한 중독성.
+                </p>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">20+</div>
+                        <div class="hero-stat-label">전국 가맹점</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">45%↑</div>
+                        <div class="hero-stat-label">평균 재주문율</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-num">300만</div>
+                        <div class="hero-stat-label">가맹비</div>
+                    </div>
+                </div>
+                <button class="hero-btn" onclick="goTo('profit')">
+                    소자본 성공창업 문의하기 →
+                </button>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-logo-frame">
+                    <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXrMFM%2FdJMcacPxjA0%2FAAAAAAAAAAAAAAAAAAAAAMrkRo8rz6QwXWGTcVPhnSF8zFgI0GZt9EaCulhC38Bz%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1772290799%26allow_ip%3D%26allow_referer%3D%26signature%3D5qY9e5ceuc3mbrKiACyxRWohYog%253D" alt="불향기 로고">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Numbers Strip -->
+    <div class="numbers-strip">
+        <div class="numbers-inner">
+            <div class="number-item reveal scale-in d1">
+                <div class="number-val"><span class="count-up" data-target="20" data-suffix="+">0</span></div>
+                <div class="number-label">전국 가맹점 수</div>
+            </div>
+            <div class="number-item reveal scale-in d2">
+                <div class="number-val"><span class="count-up" data-target="45" data-suffix="%↑">0</span></div>
+                <div class="number-label">평균 재주문율</div>
+            </div>
+            <div class="number-item reveal scale-in d3">
+                <div class="number-val"><span class="count-up" data-target="1000" data-suffix="+" data-sep="true">0</span></div>
+                <div class="number-label">블로그 누적 후기</div>
+            </div>
+            <div class="number-item reveal scale-in d4">
+                <div class="number-val"><span class="count-up" data-target="300" data-suffix="만원">0</span></div>
+                <div class="number-label">가맹비 + 교육비</div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+
+        <!-- MARKETING INSIGHT -->
+        <section id="analysis">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label" style="color:var(--fire-light);border-color:var(--fire-light);">Marketing Insight</span>
+                    <h2 class="section-title" style="color:white;">데이터가 증명하는<br>매운맛 직화구이의 생존력</h2>
+                    <p class="section-sub">스트레스 해소용 매운맛 수요는 불황기일수록 상승합니다.</p>
+                </div>
+                <div class="insight-cards">
+                    <div class="insight-card reveal d1"><div class="insight-num">01</div><div class="insight-title">경기 불황 맞춤형</div><div class="insight-desc">스트레스 해소용 매운맛 수요는 불황기일수록 상승합니다. 안정적인 매출의 밑거름입니다.</div></div>
+                    <div class="insight-card reveal d2"><div class="insight-num">02</div><div class="insight-title">불향 특제 소스</div><div class="insight-desc">특수 직화 공법으로 시간이 지나도 불향과 식감을 유지하여 높은 별점을 보장합니다.</div></div>
+                    <div class="insight-card reveal d3"><div class="insight-num">03</div><div class="insight-title">SNS 자발적 바이럴</div><div class="insight-desc">강렬한 직화 비주얼은 블로그·인스타그램 후기를 자동 생성하는 최고의 마케팅 툴입니다.</div></div>
+                    <div class="insight-card reveal d4"><div class="insight-num">04</div><div class="insight-title">강력한 브랜드 충성도</div><div class="insight-desc">한 번 맛보면 잊을 수 없는 '진짜 불맛'으로 타 브랜드 대비 압도적인 재주문율을 기록합니다.</div></div>
+                </div>
+                <div class="insight-bottom">
+                    <div class="chart-box reveal from-left">
+                        <div class="chart-box-title">매운맛 소스 및 직화구이 시장 성장률</div>
+                        <div class="chart-container"><canvas id="marketChart"></canvas></div>
+                    </div>
+                    <div class="insight-right">
+                        <div class="insight-highlight reveal from-right">
+                            <h4>"소스 제조사의 직영 물류 시스템"</h4>
+                            <p>불향기는 유통만 하는 브랜드가 아닙니다. <strong>대표가 직접 소스를 제조하고 육류를 가공</strong>하여 가맹점에 최저가 수준의 원가율을 제공합니다.</p>
+                        </div>
+                        <div class="metric-grid reveal from-right d2">
+                            <div class="metric-item">
+                                <div class="metric-label">블로그 누적 후기</div>
+                                <div class="metric-value"><span class="count-up" data-target="1000" data-suffix="+" data-sep="true">0</span></div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-label">평균 재주문율</div>
+                                <div class="metric-value"><span class="count-up" data-target="45" data-suffix="%↑">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY BULHYANGGI -->
+        <section id="why-bulhyanggi">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label">Why Bulhyanggi?</span>
+                    <h2 class="section-title">점주님들이<br>불향기를 선택하는 이유</h2>
+                    <p class="section-sub">맛, 시스템, 비용 — 세 가지 모두 갖춘 프랜차이즈</p>
+                </div>
+                <div class="why-grid">
+                    <!-- <div class="why-card reveal d2"><span class="why-card-num">02</span><span class="why-icon">⚙️</span><h4>완조리 원팩 시스템</h4><p>전문 주방 인력 없이도 5분이면 조리 끝! 인건비를 줄이고 운영 효율을 극대화했습니다.</p></div> -->
+                    <div class="why-card reveal d2"><span class="why-card-num">01</span><span class="why-icon">⚙️</span><h4>신개념 '안주 테이크아웃 전문점'</h4><p>배달대신 저렴한 가격과 고객 노출형 조리 시스템으로 고정비용은 줄이고 구매력은 높였습니다.</p></div>
+                    <div class="why-card reveal d1"><span class="why-card-num">02</span><span class="why-icon">🔥</span><h4>압도적 '불맛' 레시피</h4><p>숙성된 고춧가루와 비법 소스, 진짜 직화가 만나 흉내 낼 수 없는 감칠맛을 만듭니다.</p></div>
+                    <div class="why-card reveal d3"><span class="why-card-num">03</span><span class="why-icon">💰</span><h4>거품 없는 창업 비용</h4><p>가맹비 300만원, 자율 인테리어 가능. 소자본으로도 고수익 매장을 만들 수 있습니다.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIGNATURE MENU -->
+        <section id="menu">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label" style="color:var(--fire-light);border-color:var(--fire-light);">Signature Menu</span>
+                    <h2 class="section-title" style="color:white;">불향기만의<br>베스트셀러 직화 요리</h2>
+                    <p class="section-sub">중독성 강한 직화 불맛, 한 번 먹으면 계속 생각나는 맛</p>
+                </div>
+                <div class="menu-grid">
+                    <div class="menu-card reveal d1">
+                        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2020/9/3/zJF1XL9vljEYfbdd0FmJ3sYfcI9q8N20RBTq212lAAgKwWy9TfrOgh7M6EvzYLT4.jpg" alt="직화 불막창">
+                        <div class="menu-card-overlay"><span class="menu-tag red">Best Seller</span><h3>불향 양념 막창</h3><p>불향기만의 비법 소스로 구워낸 시그니처 메뉴</p></div>
+                    </div>
+                    <div class="menu-card reveal d2">
+                        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2020/9/3/zJF1XL9vljEYfbdd0FmJ3td-x6_k-2epkCmeiBXzcP7EWPYkY2T4Lm99Hdhvm1oI.jpg" alt="직화 불곱창">
+                        <div class="menu-card-overlay"><span class="menu-tag orange">Spicy Addiction</span><h3>불향 양념 곱창</h3><p>잡내 없이 쫄깃한 식감과 중독성 강한 매운맛</p></div>
+                    </div>
+                    <div class="menu-card reveal d3">
+                        <img src="http://imagefarm.baemin.com/smartmenuimage/upload/image/2022/11/7/4rHM67mDzNOoWvUIFhITdcghPmgI85doCjrSfS3mKcM=.jpg" alt="모듬세트">
+                        <div class="menu-card-overlay"><span class="menu-tag dark">New Classic</span><h3>모듬세트</h3><p>A: 곱창+꼬들살+껍데기 · B: 오돌갈비+곱창+껍데기</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section id="reviews">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label">Real Reviews</span>
+                    <h2 class="section-title">직접 경험한<br>점주와 고객의 후기</h2>
+                    <p class="section-sub">숫자보다 말해주는 진짜 이야기</p>
+                </div>
+                <div class="review-grid">
+                    <div class="review-card reveal d1">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"처음엔 반신반의했는데, 개점 첫 달부터 예상 매출을 훌쩍 넘겼어요. 완조리 시스템 덕분에 혼자서도 운영이 가능하고, 본사 지원이 정말 든든합니다."</p>
+                        <div class="review-author">경기 **점 점주 · 운영 14개월차</div>
+                    </div>
+                    <div class="review-card reveal d2">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"불향이 시간이 지나도 살아있다는 게 진짜 차별점이에요. 단골 고객이 매주 오시는 분들이 늘었어요."</p>
+                        <div class="review-author">강원도 **점 점주 · 운영 8개월차</div>
+                    </div>
+                    <div class="review-card reveal d3">
+                        <div class="review-stars">★★★★★</div>
+                        <p class="review-text">"다른 프랜차이즈 두 개 운영해봤는데, 원가율이 이렇게 낮은 건 처음이에요. 소스를 직접 만드는 브랜드라 중간 마진이 없는 게 느껴집니다."</p>
+                        <div class="review-author">서울 **점 점주 · 운영 28개월차</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROFIT CALCULATOR -->
+        <section id="profit">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label">Profit Calculator</span>
+                    <h2 class="section-title">실제 매장 데이터 기반<br>수익 시뮬레이터</h2>
+                    <p class="section-sub">슬라이더를 조정해 나만의 예상 수익을 확인해보세요</p>
+                </div>
+                <div class="calc-wrap reveal scale-in d2">
+                    <div class="calc-left">
+                        <div class="range-group">
+                            <div class="range-label"><span>일 평균 예상 매출</span><span id="dailySalesDisplay">1,000,000 원</span></div>
+                            <input type="range" min="300000" max="3000000" step="50000" value="1000000" id="dailySalesInput">
+                            <div class="range-limits"><span>30만원</span><span>300만원</span></div>
+                        </div>
+                        <div class="calc-summary-grid">
+                            <div class="calc-summary-item"><div class="calc-summary-label">월 예상 매출 (30일)</div><div class="calc-summary-value" id="monthlySalesDisplay">30,000,000 원</div></div>
+                            <div class="calc-summary-item"><div class="calc-summary-label">재료비 (33%)</div><div class="calc-summary-value" id="foodCostDisplay">9,900,000 원</div></div>
+                        </div>
+                        <div class="expenses-title">지출 설정 (월 기준)</div>
+                        <div class="range-group">
+                            <div class="range-label"><span>임대료</span><span id="rentDisplay">1,500,000 원</span></div>
+                            <input type="range" min="500000" max="5000000" step="100000" value="1500000" id="rentInput">
+                        </div>
+                        <div class="range-group">
+                            <div class="range-label"><span>인건비</span><span id="laborDisplay">3,000,000 원</span></div>
+                            <input type="range" min="0" max="10000000" step="100000" value="3000000" id="laborInput">
+                        </div>
+                        <div class="range-group">
+                            <div class="range-label"><span>공과금 및 기타 (로열티, 배달앱 등) — 약 15%</span><span id="utilityDisplay">4,500,000 원</span></div>
+                            <div style="height:4px;background:#e8e0d5;position:relative;"><div style="position:absolute;left:0;top:0;height:100%;width:15%;background:var(--fire);"></div></div>
+                        </div>
+                    </div>
+                    <div class="calc-right">
+                        <div class="calc-right-label">월 예상 순수익</div>
+                        <div class="profit-num" id="netProfitDisplay">11,100,000 원</div>
+                        <div class="profit-margin">순수익률 <span id="profitMarginDisplay">37.0%</span></div>
+                        <div class="donut-wrap"><canvas id="profitChart" width="260" height="260"></canvas></div>
+                        <p class="calc-note">* 위 시뮬레이션은 예상치이며,<br>실제 매장 상황에 따라 달라질 수 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+            <div class="section-wrap">
+                <div class="reveal">
+                    <span class="section-label">Direct Consulting</span>
+                    <h2 class="section-title">지금 바로<br>창업 상담 신청하기</h2>
+                </div>
+                <div class="contact-wrap">
+                    <div class="contact-profile reveal from-left">
+                        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbOzPNo%2FdJMcabp6PsW%2FAAAAAAAAAAAAAAAAAAAAAE0DOJhLz7LtyFhitrFFYnHTD3bCFEVTcZ-r1rVzQgHo%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1774969199%26allow_ip%3D%26allow_referer%3D%26signature%3DJEYhrs5VVh0DW8PH88TA2TPt2%252FM%253D" alt="공혁동 대표" class="profile-img">
+                        <div class="contact-name">공혁동 대표</div>
+                        <div class="contact-role">Direct Consulting</div>
+                    </div>
+                    <div class="reveal from-right">
+                        <h4 class="contact-quote">"맛있게, 그리고<br>함께 성공합시다"</h4>
+                        <p class="contact-desc">불향기는 <strong>소스 제조 및 육가공 유통 전문성</strong>을 갖춘 내실 있는 브랜드입니다.<br>어려운 시기, 불필요한 비용 부담 없이 <strong>진짜 불맛</strong> 하나로 승부하고 싶은 사장님들을 기다립니다.<br>제조사가 직접 관리하는 불향기에서 실패 없는 창업 로드맵을 설계해드리겠습니다.</p>
+                        <div class="contact-info-grid">
+                            <div class="contact-info-item"><div class="contact-info-label">상호명</div><div class="contact-info-value">불향기 (BULHYANGGI)</div></div>
+                            <div class="contact-info-item"><div class="contact-info-label">문의전화</div><div class="contact-info-value">010-2208-5540</div></div>
+                        </div>
+                        <a href="tel:01022085540" class="contact-btn">가맹 상담 신청하기<span class="contact-btn-icon">📞</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="hashtag-section">
+        <div class="hashtag-inner">
+            <span class="hashtag">#불향기</span><span class="hashtag">#직화구이창업</span><span class="hashtag">#막창창업</span><span class="hashtag">#소자본창업추천</span><span class="hashtag">#불맛막창</span><span class="hashtag">#닭발맛집</span><span class="hashtag">#직화구이프랜차이즈</span><span class="hashtag">#1인창업</span><span class="hashtag">#매운맛프랜차이즈</span><span class="hashtag">#성공창업</span><span class="hashtag">#매운맛소스</span><span class="hashtag">#불닭발</span><span class="hashtag">#불막창</span><span class="hashtag">#불곱창</span><span class="hashtag">#불향기직화구이</span><span class="hashtag">#불막창창업</span><span class="hashtag">#불곱창창업</span><span class="hashtag">#테이크아웃창업</span><span class="hashtag">#테이크아웃전문점</span><span class="hashtag">#소자본창업</span>
+        </div>
+    </div>
+
+    <footer>
+        <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXrMFM%2FdJMcacPxjA0%2FAAAAAAAAAAAAAAAAAAAAAMrkRo8rz6QwXWGTcVPhnSF8zFgI0GZt9EaCulhC38Bz%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1772290799%26allow_ip%3D%26allow_referer%3D%26signature%3D5qY9e5ceuc3mbrKiACyxRWohYog%253D" alt="불향기 로고">
+        <p>본사: 경기도 광주시 오포읍 수렁개길29번길 3, 1층 | 대표: 공혁동</p>
+        <p style="margin-top:0.75rem;font-size:0.65rem;letter-spacing:0.15em;">&copy; 2024 BULHYANGGI FRANCHISE GROUP. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        /* ===== NAV SCROLL ===== */
+        const mainNav = document.getElementById('mainNav');
+        window.addEventListener('scroll', () => {
+            mainNav.classList.toggle('scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        function goTo(id) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - 70, behavior: 'smooth' });
+        }
+
+        /* ===== EMBER PARTICLES ===== */
+        (function() {
+            const container = document.getElementById('embers');
+            for (let i = 0; i < 30; i++) {
+                const e = document.createElement('div');
+                e.className = 'ember';
+                const size = Math.random() * 3 + 1.5;
+                const glow = size > 3 ? `0 0 8px 3px rgba(255,149,0,0.6)` : `0 0 4px 2px rgba(255,149,0,0.4)`;
+                e.style.cssText = `
+                    left:${Math.random()*100}%;
+                    width:${size}px; height:${size}px;
+                    background:${Math.random()>0.6 ? '#ff9500' : '#e8380d'};
+                    animation-duration:${Math.random()*7+5}s;
+                    animation-delay:${Math.random()*10}s;
+                    --drift:${(Math.random()-0.5)*100}px;
+                    box-shadow:${glow};
+                `;
+                container.appendChild(e);
+            }
+        })();
+
+        /* ===== INTERSECTION OBSERVER: REVEAL ===== */
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        /* ===== COUNT-UP ===== */
+        function animateCount(el) {
+            const target = parseInt(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            const sep = el.dataset.sep === 'true';
+            const duration = 1800;
+            const start = performance.now();
+            function ease(t) { return 1 - Math.pow(1 - t, 3); }
+            function step(now) {
+                const t = Math.min((now - start) / duration, 1);
+                const current = Math.floor(ease(t) * target);
+                el.textContent = sep ? current.toLocaleString('ko-KR') + suffix : current + suffix;
+                if (t < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        const countObs = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCount(entry.target);
+                    countObs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.count-up').forEach(el => countObs.observe(el));
+
+        /* ===== MARKET CHART ===== */
+        function initMarketChart() {
+            const ctx = document.getElementById('marketChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023', '2024(E)'],
+                    datasets: [{
+                        label: '시장 규모',
+                        data: [1.2, 1.6, 2.3, 3.1, 4.2],
+                        borderColor: '#e8380d',
+                        backgroundColor: 'rgba(232,56,13,0.07)',
+                        borderWidth: 3, pointBackgroundColor: '#e8380d', pointRadius: 5,
+                        fill: true, tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: 'rgba(255,255,255,0.35)', font: { size: 11 } } },
+                        x: { grid: { display: false }, ticks: { color: 'rgba(255,255,255,0.35)', font: { size: 11 } } }
+                    }
+                }
+            });
+        }
+
+        /* ===== PROFIT CHART ===== */
+        let profitChart = null;
+        function updateProfitChart(food, rent, labor, utility, net) {
+            const ctx = document.getElementById('profitChart').getContext('2d');
+            const data = {
+                labels: ['재료비', '임대료', '인건비', '공과금/기타', '순수익'],
+                datasets: [{ data: [food, rent, labor, utility, net < 0 ? 0 : net], backgroundColor: ['#e8380d','#6b7280','#60a5fa','#f59e0b','#4ade80'], borderWidth: 0 }]
+            };
+            if (profitChart) { profitChart.data = data; profitChart.update(); }
+            else {
+                profitChart = new Chart(ctx, {
+                    type: 'doughnut', data,
+                    options: {
+                        cutout: '65%',
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: { callbacks: { label: c => c.label + ': ' + new Intl.NumberFormat('ko-KR').format(c.raw) + '원' } }
+                        }
+                    }
+                });
+            }
+        }
+
+        /* ===== PROFIT CALC ===== */
+        function fmt(v) { return new Intl.NumberFormat('ko-KR').format(Math.floor(v)) + ' 원'; }
+
+        function updateCalc() {
+            const daily = +document.getElementById('dailySalesInput').value;
+            const monthly = daily * 30;
+            const food = Math.floor(monthly * 0.33);
+            const rent = +document.getElementById('rentInput').value;
+            const labor = +document.getElementById('laborInput').value;
+            const utility = Math.floor(monthly * 0.15);
+            const net = monthly - food - rent - labor - utility;
+            const margin = monthly === 0 ? 0 : ((net / monthly) * 100).toFixed(1);
+            document.getElementById('dailySalesDisplay').textContent = fmt(daily);
+            document.getElementById('monthlySalesDisplay').textContent = fmt(monthly);
+            document.getElementById('foodCostDisplay').textContent = fmt(food);
+            document.getElementById('rentDisplay').textContent = fmt(rent);
+            document.getElementById('laborDisplay').textContent = fmt(labor);
+            document.getElementById('utilityDisplay').textContent = fmt(utility);
+            document.getElementById('netProfitDisplay').textContent = fmt(net);
+            document.getElementById('profitMarginDisplay').textContent = margin + '%';
+            updateProfitChart(food, rent, labor, utility, net);
+        }
+
+        window.addEventListener('load', () => {
+            initMarketChart();
+            updateCalc();
+            ['dailySalesInput','rentInput','laborInput'].forEach(id =>
+                document.getElementById(id).addEventListener('input', updateCalc)
+            );
+        });
+    </script>
+
+</body>
+</html>
